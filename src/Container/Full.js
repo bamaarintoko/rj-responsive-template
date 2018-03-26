@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Header from "../Components/Header/Header";
+import PageHome from "../Pages/Home/page-home";
 import {CardPanel, Col, Row} from "react-materialize";
+import {Route, Switch} from "react-router-dom";
 
 class Full extends Component {
     render() {
@@ -9,16 +11,9 @@ class Full extends Component {
             <div className="app">
                 <Header/>
                 <div>
-                    <Row>
-                        <Col s={12} m={6}>
-                            <CardPanel className="teal lighten-4 black-text">
-                                <span>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.</span>
-                            </CardPanel>
-                        </Col>
-                        <Col s={12} m={6}>
-                            For a simpler card with less markup, try using a card panel which just has padding and a shadow effect
-                        </Col>
-                    </Row>
+                    <Switch>
+                        <Route path={"/"} name ="Home" component={PageHome}/>
+                    </Switch>
                 </div>
             </div>
         );
