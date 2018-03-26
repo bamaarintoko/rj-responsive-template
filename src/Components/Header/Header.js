@@ -5,7 +5,7 @@ import {Navbar, NavItem} from "react-materialize";
 class Header extends Component {
     render() {
         return (
-            <Navbar style={{backgroundColor:'#0D47A1'}} brand='logo' right>
+            <Navbar style={{backgroundColor:'#424242'}} brand='logo' right>
 
                 <NavItem href='get-started.html'>
                     <span style={{float:"left"}}>Menu</span>
